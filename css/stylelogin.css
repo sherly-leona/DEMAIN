@@ -1,0 +1,81 @@
+@font-face{
+    font-family:"DemainFont";
+    src:url("../fonts/ARCADECLASSIC.TTF")
+    format("truetype");
+}
+.loginpage{
+    background:#151414;
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"DemainFont";
+    cursor:url("../images/cursordemain.png") 12 20, auto;
+    color: white;
+}
+.background-animation{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url("../images/envelope.gif");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:650px;
+    filter:blur(2px);
+    opacity:0.20;
+    z-index:-1;
+}
+.login-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    transform:translateY(-40px);
+}
+.welcome{
+    font-size:25px;
+    letter-spacing:5px;
+    margin:0;
+}
+.input-group{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    width:100%;
+}
+label{
+    width:180px;
+    font-size:20px;
+}
+input{
+    width:320px;
+    height:45px;
+    background:none;
+    border:2px solid #d785f4;
+    color:white;
+    font-size:22px; 
+    padding-left:15px;
+    font-family:"DemainFont";
+    outline:none;
+}
+.login-btn{
+    margin-top:25px;
+    font-family:"DemainFont";
+    font-size:22px;
+    padding:18px 45px;
+    background:none;
+    color:white;
+    border:2px solid #d785f4;
+    box-shadow:5px 5px 0px #8d5c96;
+    cursor:url("../images/cursordemain.png") 12 20, pointer;
+    transition:.3s;
+}
+.login-btn:hover{
+    background:white;
+    color:black;
+    transform:translateY(-4px);
+}
