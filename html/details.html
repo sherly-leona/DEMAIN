@@ -6,6 +6,7 @@
     <title>DETAILS | DEMAIN</title>
     <link rel = "stylesheet" href = "../css/styledetails.css">
 </head>
+<script src = "../javascript/details.js"></script>
 <body class = "detailspage">
     <div class = "background-animation"></div>
     <div class = "details-box">
@@ -14,23 +15,35 @@
         </div>
         <div class = "input-group">
             <label>CAPSULE&nbsp;&nbsp;TITLE</label>
-            <input type = "text" placeholder="title for your capsule">
+            <input type = "text" placeholder="title for your capsule" id = "title">
         </div>
         <div class = "input-group">
             <label>SEND&nbsp;&nbsp;TO</label>
-            <input type = "email" placeholder="receiver's email">
+            <input type = "email" placeholder="receiver's email" id = "emailr">
         </div>
         <div class = "input-group">
             <label>OPEN&nbsp;&nbsp;ON</label>
-            <input type = "date" placeholder = "open capsule on?">
+            <input type = "date" placeholder = "open capsule on?" id = "date">
         </div>
         <div class = "input-group">
             <label>OPEN&nbsp;&nbsp;AT</label>
-            <input type = "time" placeholder="open capsule at?">
+            <input type = "time" placeholder="open capsule at?" id = "time">
         </div>
-        <form action = "mycapsules.html">
-            <button class = "seal-btn">SEAL CAPSULE</button>
-        </form>
+        <button class = "seal-btn" onclick="validateDetails()">SEAL CAPSULE</button>
+    </div>
+    <div id="popup" class="popup hidden">
+    <div class="popup-top">
+        <span>DEMAIN.EXE</span>
+        <button onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-content">
+        <img src="../images/envelopealert.png" alt="heart">
+        <p id="popup-message">
+            Message Here
+        </p>
+        <button onclick="closePopup()">
+            OK
+        </button>
     </div>
 </body>
 </html>
